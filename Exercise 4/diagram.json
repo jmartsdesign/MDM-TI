@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "author": "JMArts Design",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -147, "left": -93.2, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 90.75, "left": -85.84, "attrs": {} },
+    { "type": "wokwi-rgb-led", "id": "rgb1", "top": -140, "left": 49.1, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -43.2,
+      "left": 28.25,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -43.2,
+      "left": 47.45,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -43.2,
+      "left": 57.05,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "bb1:14b.i", "uno:11", "red", [ "v0" ] ],
+    [ "bb1:16b.i", "uno:10", "green", [ "v69.76", "h-8.86" ] ],
+    [ "bb1:17b.i", "uno:9", "blue", [ "v76.58", "h-1.43" ] ],
+    [ "rgb1:R", "bb1:14t.a", "", [ "$bb" ] ],
+    [ "rgb1:COM", "bb1:15t.b", "", [ "$bb" ] ],
+    [ "rgb1:G", "bb1:16t.a", "", [ "$bb" ] ],
+    [ "rgb1:B", "bb1:17t.a", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:14t.d", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:14b.h", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:16t.d", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:16b.h", "", [ "$bb" ] ],
+    [ "r3:1", "bb1:17t.d", "", [ "$bb" ] ],
+    [ "r3:2", "bb1:17b.h", "", [ "$bb" ] ],
+    [ "uno:5V", "bb1:15t.c", "red", [ "v37.32", "h194.44", "v-395.33" ] ]
+  ],
+  "dependencies": {}
+}
