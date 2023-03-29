@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "JMArts Design",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 35.4, "left": 22, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 34.79, "left": -268.22, "attrs": {} },
+    { "type": "wokwi-rgb-led", "id": "rgb1", "top": 61.6, "left": 154.7, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 272.06,
+      "left": 232.75,
+      "rotate": 180,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "bb1:bn.1", "red", [ "v43.53", "h21.8" ] ],
+    [ "uno:GND.2", "bb1:bp.3", "black", [ "v35.1", "h127.54" ] ],
+    [ "bb1:bp.12", "pot1:GND", "black", [ "v34.07", "h19.46" ] ],
+    [ "uno:A0", "pot1:SIG", "orange", [ "v66.02", "h13.14" ] ],
+    [ "pot1:VCC", "bb1:bn.19", "red", [ "v0" ] ],
+    [ "uno:9", "rgb1:R", "red", [ "v-38.31", "h23.52" ] ],
+    [ "uno:10", "rgb1:G", "green", [ "v-58.21", "h294.99", "v8.35" ] ],
+    [ "uno:11", "rgb1:B", "blue", [ "v-81.97", "h316.05" ] ],
+    [ "rgb1:R", "bb1:13t.c", "", [ "$bb" ] ],
+    [ "rgb1:COM", "bb1:14t.d", "", [ "$bb" ] ],
+    [ "rgb1:G", "bb1:15t.c", "", [ "$bb" ] ],
+    [ "rgb1:B", "bb1:16t.c", "", [ "$bb" ] ],
+    [ "rgb1:COM", "bb1:bn.8", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
