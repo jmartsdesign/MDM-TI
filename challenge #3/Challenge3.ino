@@ -17,15 +17,15 @@ void setup()
 void loop()
 {
   valorPot = analogRead(pot); // lê o valor do potenciômetro (de 0 a 1023)
-  if(valorPot > 0 && valorPot <= 341) // entre 256 e 512, acende vermelho
+  if(valorPot > 0 && valorPot <= 341) // entre 0 e 341, acende vermelho
   {
     acendeVermelho();
   }
-  if(valorPot > 341 && valorPot <= 682) // entre 512 e 768, acende verde
+  if(valorPot > 341 && valorPot <= 682) // entre 341 e 682, acende verde
   {
     acendeVerde();
   }
-  if(valorPot > 682 && valorPot <= 1023) // entre 768 e 1023, acende azul
+  if(valorPot > 682 && valorPot <= 1023) // entre 682 e 1023, acende azul
   {
     acendeAzul();
   }       
